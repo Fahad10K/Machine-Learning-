@@ -1,0 +1,27 @@
+correlation numerical
+medic_df.charges.corr(medical_df.age)
+correltaion between categorical
+values(yes/no)
+categorical values cannont be directly represensted so we convert them into numeric values first
+smoker_value={}'no:0,'yes':1
+smoker_numemric=medical_df.smoker.map(smoker_Value)
+medic_df.charges.corr(smoker_numeric)
+
+this numeric value repesent the how much des the first paramete effects the later 
+medic_df.charges.corr(medical_df.age)
+firts=charges
+later=age
+
+medic_df.corr() //pandas lib provides a fucntion that directly gives the correltation in tabular form
+we usually use heat maps to represnt correlations
+heat map is in seaborne lib
+sns.heatmap(medic_df.corr(),cmap='red',annot=true))
+
+now after analysis we know csmoker and age have the strongest realtion with charges
+
+
+when we plot charges=y and age = x we see that we get a linear chart
+
+in ml we now have to find the value of y which depends on x so we use y=mx+c
+we need the values of m and c to get value of y
+
